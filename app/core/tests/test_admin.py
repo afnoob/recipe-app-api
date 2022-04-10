@@ -1,7 +1,7 @@
-from ast import arg
 from django.test import TestCase, Client
 from django.contrib.auth import get_user_model
 from django.urls import reverse
+
 
 class AdminSiteTests(TestCase):
 
@@ -15,8 +15,7 @@ class AdminSiteTests(TestCase):
         self.user = get_user_model().objects.create_user(
             email='andres@gmail.com',
             password='12345',
-            name='Test user full name'
-    )
+            name='Test user full name')
 
     def test_users_listed(self):
         """Test that users are listed on user page"""

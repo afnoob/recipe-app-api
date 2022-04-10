@@ -1,6 +1,6 @@
-import email
 from django.test import TestCase
 from django.contrib.auth import get_user_model
+
 
 class ModelTests(TestCase):
 
@@ -12,7 +12,6 @@ class ModelTests(TestCase):
             email=email,
             password=password
         )
-
         self.assertEqual(user.email, email)
         self.assertTrue(user.check_password(password))
 
@@ -33,6 +32,5 @@ class ModelTests(TestCase):
             'test@gmail.com',
             'test123'
         )
-
         self.assertTrue(user.is_superuser)
         self.assertTrue(user.is_staff)
